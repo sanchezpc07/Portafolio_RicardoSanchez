@@ -244,8 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const email = document.getElementById('r-email').value;
             const password = document.getElementById('r-password').value;
+            const confirmPassword = document.getElementById('r-confirm-password').value;
             const btn = registerForm.querySelector('button');
             
+            // Password confirmation check
+            if (password !== confirmPassword) {
+                registerStatus.innerText = 'Las contraseñas no coinciden.';
+                registerStatus.className = 'form-status error';
+                return;
+            }
+
             btn.disabled = true;
             btn.innerText = 'Registrando...';
             registerStatus.className = 'form-status';
