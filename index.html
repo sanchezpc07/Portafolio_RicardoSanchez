@@ -204,7 +204,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="l-password">Contraseña</label>
-                                    <input type="password" id="l-password" placeholder="••••••••" required>
+                                    <div class="password-input-wrapper">
+                                        <input type="password" id="l-password" placeholder="••••••••" required>
+                                        <i class="fas fa-eye toggle-password" data-target="l-password"></i>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Entrar</button>
                                 <div id="loginStatus" class="form-status"></div>
@@ -224,7 +227,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="r-password">Contraseña</label>
-                                    <input type="password" id="r-password" placeholder="Mínimo 6 caracteres" required>
+                                    <div class="password-input-wrapper">
+                                        <input type="password" id="r-password" placeholder="Mínimo 6 caracteres"
+                                            required>
+                                        <i class="fas fa-eye toggle-password" data-target="r-password"></i>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
                                 <div id="registerStatus" class="form-status"></div>

@@ -297,6 +297,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Toggle Password Visibility Logic
+    document.querySelectorAll('.toggle-password').forEach(icon => {
+        icon.addEventListener('click', () => {
+            const targetId = icon.getAttribute('data-target');
+            const passwordInput = document.getElementById(targetId);
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    });
+
     // Handle Logout
     const handleLogout = async (e) => {
         if (e) e.preventDefault();
